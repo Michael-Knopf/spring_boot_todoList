@@ -8,9 +8,11 @@
     <title>First Web Application</title>
 </head>
 <body>
-    
-    <h1>My First JSP</h1>
-    <h3>Welcome ${name}!</h3>
+    <form method="post">
+        <input type="text" name="name" placeholder="Name"> <br>
+        <input type="password" name="password" placeholder="Password"> <br>
+        <input type="submit">
+    </form>
 
 </body>
 </html>
