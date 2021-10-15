@@ -13,6 +13,7 @@
         <input type="password" name="password" placeholder="Password"> <br>
         <input type="submit">
     </form>
+    <font color="red">${errorMessage}</font>
 
 </body>
 </html>
