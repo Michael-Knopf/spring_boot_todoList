@@ -7,11 +7,10 @@
     <title>Todo List</title>
 </head>
 <body>
-    
-    <h1>${name}'s Todo List</h1>
-    <hr>
-    <h4>${todos}</h4>
-    <br>
-    <a href="/add-todo">Add Todo</a>
+    <h1>Add Todo Page</h1>
+
+    <form method="post">
+        Description: <input type="text" name="desc"> <input type="submit">
+    </form>
 </body>
 </html>
