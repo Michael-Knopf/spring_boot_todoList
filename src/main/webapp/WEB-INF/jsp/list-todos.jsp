@@ -8,8 +8,9 @@
 </head>
 <body>
     
-    <h1>Welcome ${name}!</h1>
-    <h5><a href="/list-todos">Click</a> to manage todos</h5>
-
+    <h1>Todo List</h1>
+    <hr>
+    <h4>${todos}
+    </h4>
 </body>
 </html>
