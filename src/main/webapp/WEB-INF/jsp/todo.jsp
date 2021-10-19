@@ -1,3 +1,6 @@
+<%@ taglib prefix =
+"form" uri = "http://www.springframework.org/tags/form"
+%>  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,13 +15,14 @@
     <div class="container">
         <h1>Add Todo Page</h1>
 
-        <form method="post">
+        <form:form method="post" modelAttribute="todo">
             <fieldset class="form-group">
-                <label>Description:</label>
-                <input type="text" name="desc"  class="form-control" required="required">
+                <form:label path="desc">Description:</form:label>
+                <form:input path="desc" type="text" class="form-control" required="required"></form:input>
+                <form:errors path="desc" cssClass="text-warning" />
             </fieldset>
             <button type="submit" class="btn btn-success">ADD</button>
-        </form>
+        </form:form>
     </div>
 
 

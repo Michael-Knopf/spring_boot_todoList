@@ -4,14 +4,18 @@ package com.michaelknopf.springbootudemyclass.controller;
 
 import java.util.Date;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import com.michaelknopf.springbootudemyclass.web.model.Todo;
 import com.michaelknopf.springbootudemyclass.web.service.TodoService;
 
 @Controller
@@ -31,12 +35,15 @@ public class TodoController {
 	
 	@RequestMapping(value = "/add-todo", method = RequestMethod.GET)
 	public String showAddTodoPage(ModelMap model) {
+		model.addAttribute("todo", new Todo(0, (String) model.get("name"), "Add A New Todo", new Date(), false));
 		return "todo";
 	}
 	
 	@RequestMapping(value = "/add-todo", method = RequestMethod.POST)
-	public String addTodo(ModelMap model, @RequestParam String desc) {
-		service.addTodo((String)model.get("name"), desc, new Date(), false);
+	public String addTodo(ModelMap model, @Valid Todo todo, BindingResult result) {
+		if (result.hasErrors())
+			return "todo";
+		service.addTodo((String)model.get("name"), todo.getDesc(), new Date(), false);
 		return "redirect:/list-todos";
 	}
 	
