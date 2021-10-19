@@ -13,9 +13,9 @@
 </head>
 <body>
     <div class="container">
-        <h1>Add Todo Page</h1>
 
         <form:form method="post" modelAttribute="todo">
+            <form:hidden path="id"></form:hidden>
             <fieldset class="form-group">
                 <form:label path="desc">Description:</form:label>
                 <form:input path="desc" type="text" class="form-control" required="required"></form:input>
