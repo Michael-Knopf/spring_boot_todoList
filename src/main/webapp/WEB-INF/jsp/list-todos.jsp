@@ -20,6 +20,7 @@
                     <th>Description</th>
                     <th>Target Date</th>
                     <th>Is it Done?</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,13 +29,14 @@
                         <td>${todo.desc}</td>
                         <td>${todo.targetDate}</td>
                         <td>${todo.done}</td>
+                        <td><a type="button" class="btn btn-warning" href="/delete-todo?id=${todo.id}">DELETE</a></td>
                     </tr>
                 </c:forEach>
             
             </tbody>
         </table>
         <div>
-            <a class="button" href="/add-todo">Add Todo</a>
+            <a class="btn" href="/add-todo">Add Todo</a>
         </div>
         <script src="webjars/jquery/1.9.1/jquery.min.js"></script>
         <script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
