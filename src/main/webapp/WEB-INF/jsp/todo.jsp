@@ -14,10 +14,14 @@
 <body> 
         <nav role="navigation" class="navbar navbar-default">
             <div class="">
-                <a href="http://www.in28minutes.com" class="navbar-brand">in28Minutes</a>
+                <a href="https://github.com/Michael-Knopf" class="navbar-brand">Knopf</a>
             </div>
             <div class="navbar-collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/logout">Sign Out</a></li>
+        
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
                     <li><a href="/">Home</a></li>
                     <li class="active"><a href="/list-todos">Todos</a></li>
         

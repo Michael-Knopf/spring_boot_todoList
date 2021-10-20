@@ -16,11 +16,16 @@
                 <a href="https://github.com/Michael-Knopf" class="navbar-brand">Knopf</a>
             </div>
             <div class="navbar-collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/logout">Sign Out</a></li>
+        
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
                     <li><a href="/">Home</a></li>
                     <li class="active"><a href="/list-todos">Todos</a></li>
         
                 </ul>
+                
             </div>
         </nav>
     <div class="container">
