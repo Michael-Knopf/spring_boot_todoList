@@ -11,9 +11,20 @@
 	    		rel="stylesheet">
     <title>${name}'s Todo List</title>
 </head>
-<body>
+<body> 
+        <nav role="navigation" class="navbar navbar-default">
+            <div class="">
+                <a href="http://www.in28minutes.com" class="navbar-brand">in28Minutes</a>
+            </div>
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/login">Home</a></li>
+                    <li><a href="/list-todos">Todos</a></li>
+        
+                </ul>
+            </div>
+        </nav>
     <div class="container">
-
         <form:form method="post" modelAttribute="todo">
             <form:hidden path="id"></form:hidden>
             <fieldset class="form-group">
